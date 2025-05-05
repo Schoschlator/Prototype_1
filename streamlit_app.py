@@ -51,9 +51,9 @@ else:
 
 
     # Expand full article content
-    with st.expander("🗞️ Full Articles"):
-        for idx, row in filtered_df.iterrows():
-            st.markdown(f"**{row['Date']} - Impact: {row['Impact']}**")
-            st.markdown(f"*Reasoning:* {row['Reasoning']}")
-            st.markdown(f"*Article:* {row['Article']}")
-            st.markdown("---")
+    #with st.expander("🗞️ Full Articles"):
+    #    for idx, row in filtered_df.iterrows():
+    #        st.markdown(f"**{row['Date']} - Impact: {row['Impact']}**")
+    #        st.markdown(f"*Reasoning:* {row['Reasoning']}")
+    #        st.markdown(f"*Article:* {row['Article']}")
+    #        st.markdown("---")
