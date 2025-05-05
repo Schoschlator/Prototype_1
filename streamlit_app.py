@@ -5,6 +5,7 @@ import pandas as pd
 @st.cache_data
 def load_data():
     df = pd.read_csv("TestErgebnis.csv", parse_dates=["Date"])
+    df.columns = df.columns.str.strip()
     return df
 
 df = load_data()
