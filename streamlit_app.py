@@ -4,7 +4,7 @@ import pandas as pd
 # Load CSV
 @st.cache_data
 def load_data():
-    df = pd.read_csv("FinalPrototypeErgebnis.csv", parse_dates=["Date"])
+    df = pd.read_csv("FinalPrototypeErgebnis_ohneArtikel.csv", parse_dates=["Date"])
     df.columns = df.columns.str.strip()
     return df
 
@@ -43,7 +43,7 @@ else:
     st.markdown("### 🧾 Detailed View")
     for _, row in filtered_df.iterrows():
         with st.container():
-            st.markdown(f"**🗓️ Date:** {row['Date'].date()}  ")
+            st.markdown(f"**🗓️ Date:** {row['Date']}  ")
             st.markdown(f"**💥 Impact:** {row['Impact']}  ")
             st.markdown(f"**🧠 Reasoning:** {row['Reasoning']}  ")
             st.markdown(f"[🔗 Read full article]({row['Link']})")
