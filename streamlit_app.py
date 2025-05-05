@@ -4,7 +4,7 @@ import pandas as pd
 # Load CSV
 @st.cache_data
 def load_data():
-    df = pd.read_csv("TestErgebnis.csv", parse_dates=["Date"])
+    df = pd.read_csv("FinalPrototypeErgebnis.csv", parse_dates=["Date"])
     df.columns = df.columns.str.strip()
     return df
 
@@ -15,7 +15,7 @@ st.title("📊 News Impact Viewer")
 st.markdown("See how recent news affects companies based on articles and sentiment analysis.")
 
 # Company selector
-companies = ["Palantir", "Apple", "BMW"]
+companies = ["Apple","BMW","Palantir","Samsung Electronics","Huawei","Google","Siemens AG","Volkswagen AG","Gazprom","Uniper SE","Meta","Axel Springer SE","Lockheed Martin","GoldmanSachs","Exxon Mobil"]
 selected_company = st.selectbox("Choose a company:", companies)
 
 # Filter for selected company and ignore articles with "Not Affected" impact
