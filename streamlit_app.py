@@ -45,6 +45,7 @@ else:
             st.markdown(f"**🗓️ Date:** {row['Date'].date()}  ")
             st.markdown(f"**💥 Impact:** {row['Impact']}  ")
             st.markdown(f"**🧠 Reasoning:** {row['Reasoning']}  ")
+            st.markdown(f"[🔗 Read full article]({row['Link']})")
             st.markdown("---")
 
 
