@@ -49,7 +49,7 @@ else:
             st.markdown("---")
 
 
-    # Optional: expand full article content
+    # Expand full article content
     with st.expander("🗞️ Full Articles"):
         for idx, row in filtered_df.iterrows():
             st.markdown(f"**{row['Date'].date()} - Impact: {row['Impact']}**")
